@@ -48,9 +48,6 @@ ok 1, 1, 'compilation';
 
 if ( $ENV{TEST_DEBUG} ) {
   printf STDERR "Using CVS2CL: %s\n", CVS2CL;
-  open X, ">/tmp/cvs2cl-used";
-  print X CVS2CL;
-  close X;
 }
 
 # -------------------------------------

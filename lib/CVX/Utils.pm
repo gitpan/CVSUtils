@@ -53,7 +53,7 @@ Z<>
 
 use vars qw( $PACKAGE $VERSION );
 $PACKAGE = 'CVSUtils';
-$VERSION = '1.00';
+$VERSION = '1.01';
 
 # ----------------------------------------------------------------------------
 
@@ -67,8 +67,9 @@ Martyn J. Pearce C<fluffy@cpan.org>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2001 Martyn J. Pearce.  This program is free software; you can
-redistribute it and/or modify it under the same terms as Perl itself.
+Copyright (c) 2001, 2002, 2003 Martyn J. Pearce.  This program is free
+software; you can redistribute it and/or modify it under the same terms as
+Perl itself.
 
 =cut
 

@@ -249,16 +249,16 @@
 
 2001-05-20 18:32  martyn
 
-	* Changes (1.0), MANIFEST (1.0), Makefile.PL (1.0), README (1.0),
-	TODO (1.0), WAV.pm (1.0), gameover.wav (1.0), test.pl (1.0),
-	wav_badd (1.0), wav_cross (1.0), wav_fade (1.0), wav_stat (1.0),
-	wav_test (1.0), wav_trim (1.0): Initial revision
-
-2001-05-20 18:32  martyn
-
 	* Changes (1.0.0.1), MANIFEST (1.0.0.1), Makefile.PL (1.0.0.1),
 	README (1.0.0.1), TODO (1.0.0.1), WAV.pm (1.0.0.1), gameover.wav
 	(1.0.0.1), test.pl (1.0.0.1), wav_badd (1.0.0.1), wav_cross
 	(1.0.0.1), wav_fade (1.0.0.1), wav_stat (1.0.0.1), wav_test
 	(1.0.0.1), wav_trim (1.0.0.1): First MakeMaker Version
+
+2001-05-20 18:32  martyn
+
+	* Changes (1.0), MANIFEST (1.0), Makefile.PL (1.0), README (1.0),
+	TODO (1.0), WAV.pm (1.0), gameover.wav (1.0), test.pl (1.0),
+	wav_badd (1.0), wav_cross (1.0), wav_fade (1.0), wav_stat (1.0),
+	wav_test (1.0), wav_trim (1.0): Initial revision
 

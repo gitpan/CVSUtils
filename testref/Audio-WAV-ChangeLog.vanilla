@@ -245,11 +245,11 @@
 
 	* Changes, MANIFEST, Makefile.PL, README, TODO, WAV.pm,
 	gameover.wav, test.pl, wav_badd, wav_cross, wav_fade, wav_stat,
-	wav_test, wav_trim: Initial revision
+	wav_test, wav_trim: First MakeMaker Version
 
 2001-05-20 18:32  martyn
 
 	* Changes, MANIFEST, Makefile.PL, README, TODO, WAV.pm,
 	gameover.wav, test.pl, wav_badd, wav_cross, wav_fade, wav_stat,
-	wav_test, wav_trim: First MakeMaker Version
+	wav_test, wav_trim: Initial revision
 

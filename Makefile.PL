@@ -16,7 +16,7 @@ use constant DEPENDS      => [
                               {
                                target => 'cvs2cl.pl',
                                reqs   => [catfile(qw( bin cvs2cl ))],
-                               rules  => ['$(PERL) -ple "" $< > $@',
+                               rules  => ['$(PERL) make-cvs2cl.pl $< > $@',
                                           '$(PERL) -e "chmod 0755, @ARGV" $@',
                                          ],
                               },

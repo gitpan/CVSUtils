@@ -11,7 +11,7 @@ The tests are cribbed from the redbean set, updated as necessary
 
 use File::Spec  qw( );
 use FindBin     qw( $Bin );
-use Test        qw( ok plan );
+use Test        qw( ok plan skip );
 
 BEGIN { unshift @INC, $Bin };
 
@@ -51,7 +51,8 @@ printf STDERR "Using CVS2CL: %s\n", CVS2CL
 
 =head2 Tests 2--4: Plain Output
 
-This tests the most basic cvs2cl operation
+This tests the most basic cvs2cl operation, it also tests the implementation
+of the fix for bug 27.
 
 The invocation is run as
 
@@ -162,14 +163,20 @@ The invocation is run as
   my $err = '';
   my $log_file = '3.log';
   my $output = '3.txt';
-  simple_run_test
-    ( runargs => [[CVS2CL, qw( --utc --stdin --stdout )],
-                  '<', catfile(DATA_DIR, $log_file),
-                  '>', $output, '2>', \$err],
-      name    => "Shlomo Reinstein's logs (1)",
-      errref  => \$err,
-      checkfiles => [ $output ],
-    );
+  use Text::Wrap;
+  if ( $Text::Wrap::VERSION >= 2001.0130 ) {
+    simple_run_test
+      ( runargs => [[CVS2CL, qw( --utc --stdin --stdout )],
+                    '<', catfile(DATA_DIR, $log_file),
+                    '>', $output, '2>', \$err],
+        name    => "Shlomo Reinstein's logs (1)",
+        errref  => \$err,
+        checkfiles => [ $output ],
+      );
+  } else {
+    skip(1, 0) # Skip Text::Wrap too old\n"
+      for 11..13;
+  }
 }
 
 # -------------------------------------
@@ -195,14 +202,20 @@ The invocation is run as
   my $err = '';
   my $log_file = '3.log';
   my $output = '3-r-b-t.txt';
-  simple_run_test
-    ( runargs => [[CVS2CL, qw( --utc -r -b -t --stdin --stdout )],
-                  '<', catfile(DATA_DIR, $log_file),
-                  '>', $output, '2>', \$err],
-      name    => "Shlomo Reinstein's logs (2)",
-      errref  => \$err,
-      checkfiles => [ $output ],
-    );
+  use Text::Wrap;
+  if ( $Text::Wrap::VERSION >= 2001.0130 ) {
+    simple_run_test
+      ( runargs => [[CVS2CL, qw( --utc -r -b -t --stdin --stdout )],
+                    '<', catfile(DATA_DIR, $log_file),
+                    '>', $output, '2>', \$err],
+        name    => "Shlomo Reinstein's logs (2)",
+        errref  => \$err,
+        checkfiles => [ $output ],
+      );
+  } else {
+    skip(1, 0) # Skip Text::Wrap too old\n"
+      for 14..16;
+  }
 }
 
 # -------------------------------------
@@ -344,7 +357,5 @@ The invocation is run as
       checkfiles => [ $output ],
     );
 }
-
-
 
 # ----------------------------------------------------------------------------

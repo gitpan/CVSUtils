@@ -8,20 +8,19 @@
 
 2000-04-14 18:03  tdraier
 
-	* Persistent.java, Persistent.java: debugged setNew()
+	* Persistent.java: debugged setNew()
 
 2000-04-14 17:36  tdraier
 
-	* Persistent.java, Persistent.java: debugged setNew()
+	* Persistent.java: debugged setNew()
 
 2000-04-13 18:06  tdraier
 
-	* Persistent.java, Persistent.java: debugged the setRestoring state
+	* Persistent.java: debugged the setRestoring state
 
 2000-04-11 09:23  tdraier
 
-	* Persistent.java, Persistent.java: added protection against
-	circular restores
+	* Persistent.java: added protection against circular restores
 
 2000-04-11 08:28  tdraier
 
@@ -29,8 +28,7 @@
 
 2000-04-10 11:34  tdraier
 
-	* Persistent.java, Persistent.java: debugged problem with soft
-	reference
+	* Persistent.java: debugged problem with soft reference
 
 2000-04-10 11:16  tdraier
 
@@ -105,7 +103,7 @@
 
 2000-03-23 18:03  tdraier
 
-	* Persistent.java, Persistent.java: -added synchronization on all
+	* Persistent.java: -added synchronization on all
 	getPersistent/getUnpersistent/addCache method to protect access to
 	critical resources like objects hashtables.  -added synchronization
 	on persistent when restoring -replaced Hashtable with SoftMap for

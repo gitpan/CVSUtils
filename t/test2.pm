@@ -237,10 +237,12 @@ sub runcheck {
 
   if ( $rv >> 8 != $exitcode ) {
     if ( $ENV{TEST_DEBUG} ) {
-      warn sprintf("$name failed (expected %d) : exit/sig/core %d/%d/%d\n",
-                   $exitcode, $rv >> 8, $rv & 127, ( $rv & 128 ) >> 7);
-      warn "  $$errref\n"
-        if defined $errref and defined $$errref and $$errref !~ /^\s*$/;
+      print STDERR
+        sprintf("$name failed (expected %d) : exit/sig/core %d/%d/%d\n",
+                $exitcode, $rv >> 8, $rv & 127, ( $rv & 128 ) >> 7);
+      print STDERR
+        "  $$errref\n"
+          if defined $errref and defined $$errref and $$errref !~ /^\s*$/;
     }
     return;
   } else {
@@ -318,10 +320,10 @@ sub _nonipc_run {
       my ($pipe, $redirect, $fh) = ($pipes[$fd], $redirects[$fd], $fhs[$fd]);
       if ( $redirect eq '<' ) {
         $pipe->reader;
-        open $fh, '<& ' . $pipe->fileno;
+        open $fh, '<&' . $pipe->fileno;
       } elsif ( $redirect eq '>' ) {
         $pipe->writer;
-        open $fh, '>& ' . $pipe->fileno;
+        open $fh, '>&' . $pipe->fileno;
       } else {
         croak "Internal error: redirect $fd should not be -->$redirect<--\n";
       }
@@ -351,7 +353,7 @@ sub _nonipc_run {
       my ($pipe) = @_;
       for(0..$#redirects) {
         return $_
-          if $pipe == $pipes[$_];
+          if defined $pipes[$_] and $pipe == $pipes[$_];
       }
 
       return;
@@ -525,7 +527,9 @@ sprintf("Incomplete write (wrote %d bytes, should've been %d) on fd %d\n",
   }
 
   if ( ! defined $kidstatus ) {
-    my $waitpid = waitpid $pid, WNOHANG;
+    # Log::Info tests (trap.t) on Solaris fail with WNOHANG --- the child 
+    # process seems to hang around for a shade longer that one might expect
+    my $waitpid = waitpid $pid, 0; #WNOHANG;
     my $kidstatus = $?;
   }
   return $kidstatus;

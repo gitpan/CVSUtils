@@ -12,12 +12,11 @@
 
 2001-07-12 06:25  martyn
 
-	* README (tags: r1_01): Update date
+	* README: Update date
 
 2001-07-12 06:24  martyn
 
-	* bin/wav_trim (tags: r1_01): Update deprecated total_samples to
-	frames
+	* bin/wav_trim: Update deprecated total_samples to frames
 
 2001-07-12 06:23  martyn
 
@@ -26,8 +25,8 @@
 
 2001-07-08 19:25  martyn
 
-	* bin/: wav_cross (tags: r1_01), wav_fade (tags: r1_01), wav_trim:
-	Upgrade deprecated function calls
+	* bin/wav_cross, bin/wav_fade, bin/wav_trim: Upgrade deprecated
+	function calls
 
 2001-07-08 18:53  martyn
 
@@ -52,14 +51,12 @@
 
 2001-07-08 09:50  martyn
 
-	* bin/wav_info (tags: r1_01): Check for errors during arg
-	processing (die '!FINISH') Add length accumulation, mm:ss
-	capabilities
+	* bin/wav_info: Check for errors during arg processing (die
+	'!FINISH') Add length accumulation, mm:ss capabilities
 
 2001-07-08 06:54  martyn
 
-	* bin/: wav_fade, wav_info, wav_split (tags: r1_01): Much POD
-	Correction
+	* bin/wav_fade, bin/wav_info, bin/wav_split: Much POD Correction
 
 2001-07-08 06:45  martyn
 
@@ -75,11 +72,11 @@
 
 2001-07-08 06:42  martyn
 
-	* bin/wav_badd (tags: r1_01): Much POD correction
+	* bin/wav_badd: Much POD correction
 
 2001-07-08 06:18  martyn
 
-	* MANIFEST (tags: r1_01): Remove wav_test
+	* MANIFEST: Remove wav_test
 
 2001-07-08 06:13  martyn
 
@@ -103,12 +100,12 @@
 
 2001-07-07 05:52  martyn
 
-	* bin/: wav_split, wav_trim, wav_badd, wav_cross: Very minor POD
-	correction
+	* bin/wav_split, bin/wav_trim, bin/wav_badd, bin/wav_cross: Very
+	minor POD correction
 
 2001-07-07 05:49  martyn
 
-	* lib/Audio/WAV.pm (tags: r1_01): Updated POD to new standards.
+	* lib/Audio/WAV.pm: Updated POD to new standards.
 
 2001-07-07 05:42  martyn
 
@@ -120,12 +117,12 @@
 
 2001-07-07 05:25  martyn
 
-	* Makefile.PL (tags: r1_01): Uprate to recent template
+	* Makefile.PL: Uprate to recent template
 
 2001-07-07 05:19  martyn
 
-	* bin/: wav_badd, wav_cross, wav_fade, wav_info, wav_test,
-	wav_trim: Moved here from root
+	* bin/wav_badd, bin/wav_cross, bin/wav_fade, bin/wav_info,
+	bin/wav_test, bin/wav_trim: Moved here from root
 
 2001-06-27 17:31  martyn
 
@@ -191,12 +188,12 @@
 
 2001-05-31 14:33  martyn
 
-	* Changes (tags: r1_01): Added 1.01 changes
+	* Changes: Added 1.01 changes
 
 2001-05-31 14:28  martyn
 
-	* t/: gameover.bad.wav, gameover.wav, wav_badd.t, wav_info.t
-	(utags: r1_01): At last!  A test harness!
+	* t/gameover.bad.wav, t/gameover.wav, t/wav_badd.t, t/wav_info.t:
+	At last!  A test harness!
 
 2001-05-31 14:27  martyn
 
@@ -237,8 +234,8 @@
 
 2001-05-22 06:26  martyn
 
-	* CRC.pm, t/CRC.t, t/WAV.t (tags: r1_01), t/nlmda.lyr,
-	t/wav_badd.t: Enhanced testing with CRC checker
+	* CRC.pm, t/CRC.t, t/WAV.t, t/nlmda.lyr, t/wav_badd.t: Enhanced
+	testing with CRC checker
 
 2001-05-22 06:25  martyn
 
