@@ -1,0 +1,7 @@
+^(.*/)?CVS/.*
+Makefile
+^blib/.*
+^pm_to_blib$
+^.cvsignore$
+CHECK-IT-RUNS-UNDER-5.005
+cvs2cl.pl

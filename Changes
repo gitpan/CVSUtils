@@ -1,0 +1,16 @@
+Revision history for Perl extension CVSUtils.
+
+1.00  Tue Jul 23  7:08 AM GMT 2002
+	- Add redbean tests
+	- Uses cvs2cl (almost) completely unchanged from redbean source
+	- Add (simple) make target for cvs2cl.pl
+	- Add test mechanism for cvs2cl.pl as for cvs2cl
+	- Make it all 5.00503-compatible
+	- sort utags on cvs2cl output
+
+0.01  Fri Dec 21  7:21 PM GMT 2001
+	- original version
+	- cvs2cl.pl from red-bean.com
+	- with added option --ignore-tag
+	- not pmcompat-ible
+
